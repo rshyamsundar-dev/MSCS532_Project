@@ -2,29 +2,40 @@
 
 ## Overview
 
-This project is a proof-of-concept implementation of a Dynamic Inventory
-Management System developed for Phase 2 of the course project.
+This project implements and optimizes a Dynamic Inventory Management System using Python data structures.
 
-The application demonstrates how multiple data structures can work together
-to support common inventory operations such as insertion, searching, deletion,
-category-based retrieval, price ordering, and low-stock identification.
+Phase 2 developed the proof-of-concept implementation using a dictionary, Binary Search Tree, min-heap, and category map.
 
-## Data Structures
+Phase 3 improves scalability and worst-case performance through:
 
-The project uses the following data structures:
+- A self-balancing AVL tree
+- Physical AVL deletion
+- Price-traversal caching
+- Min-heap compaction
+- Performance benchmarking
+- Stress testing
+- Automated validation
 
-- **Dictionary:** Stores products by unique product ID for efficient lookup.
-- **Binary Search Tree:** Stores products by price and supports ascending-order traversal.
-- **Min-Heap:** Identifies the product with the lowest available quantity.
-- **Category Map:** Groups product IDs by product category.
+## Phase 3 Results
+
+During the ascending-price stress test, the optimized AVL implementation inserted 10,000 products in 0.090211 seconds, compared with 5.723935 seconds for the original Binary Search Tree.
+
+This represents an approximately 63.45× improvement under worst-case ordered input.
+
+The optimized implementation also passed all 20 Phase 3 unit tests.
 
 ## Project Structure
 
-```
-Dynamic-Inventory-Management/
-├── product.py
-├── price_tree.py
-├── inventory_manager.py
-├── demo.py
-├── test_inventory.py
-└── README.md
+- `product.py` – Product data model and validation
+- `price_tree.py` – Original Phase 2 Binary Search Tree
+- `inventory_manager.py` – Original Phase 2 inventory manager
+- `avl_tree.py` – Optimized self-balancing AVL tree
+- `optimized_inventory_manager.py` – Phase 3 optimized inventory manager
+- `benchmark.py` – Phase 2 baseline benchmark
+- `comparison_benchmark.py` – Phase 2 and Phase 3 comparison
+- `stress_test.py` – Ascending-price stress test
+- `test_inventory.py` – Phase 2 unit tests
+- `test_optimized_inventory.py` – Phase 3 unit tests
+- `generate_graphs.py` – Performance graph generator
+- `comparison_results.csv` – Comparison benchmark results
+- `stress_test_results.csv` – Stress-test results
