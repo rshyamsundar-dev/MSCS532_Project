@@ -1,0 +1,4 @@
+dataset_size,phase2_insertion_time,phase3_insertion_time,phase2_phase3_ratio,avl_balanced
+1000,0.077743,0.006865,11.32,True
+5000,1.464634,0.041423,35.36,True
+10000,5.723935,0.090211,63.45,True
